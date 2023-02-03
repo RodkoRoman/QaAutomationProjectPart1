@@ -1,5 +1,6 @@
 package rodko;
 
+import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -67,6 +68,9 @@ public class LoginTest {
         userDataPage.entrySafety();
         safetyPage.entryLogoutFromAllDevices();
         safetyPage.logoutUser();
-
     }
+
+    @AfterClass
+    public static void driverQuit() {
+        driver.quit(); }
 }
