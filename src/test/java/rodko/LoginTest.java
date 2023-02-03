@@ -45,6 +45,9 @@ public class LoginTest {
         driver.get("https://passport.yandex.ru/auth");
     }
 
+    /**
+     * тестовый метод для аутентификации, проверки имени, и выхода со всех устройств
+     */
     @Test
     public void loginTest() {
         //вводим логин
@@ -70,6 +73,9 @@ public class LoginTest {
         safetyPage.logoutUser();
     }
 
+    /**
+     * отключение драйвера
+     */
     @AfterClass
     public static void driverQuit() {
         driver.quit(); }
